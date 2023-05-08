@@ -75,8 +75,7 @@ body {
 }
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+   
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -113,7 +112,22 @@ body {
     text-transform: uppercase;
     color: var(--color-navy-blue);
 }
+.header-link.curent {
+    color: #404BBF;
+    position: relative;
+}
+.curent::after {
+    content:"" ;
+    height: 4px;
+left: 0;
+position: absolute;
+width: 100%;
 
+bottom: -1px;
+
+background: #404BBF;
+border-radius: 2px;
+}
 .header-list {
 
     gap: 40px;
@@ -131,11 +145,15 @@ body {
     letter-spacing: 0.02em;
     color: #2e2f42;
     text-decoration: none;
+    padding: 24px 0;
+    display: block;
+    transition: color var(--timing-function);
+
 }
 
 .header-link:hover,
 .header-link:focus {
-    color: #404bbf
+    color: #404bbf;
 }
 
 .header-address {
@@ -158,13 +176,15 @@ body {
 .address-item {}
 
 .header-mail {
-    font-style: normal;
-    font-weight: 400;
+    padding: 24px 0;
+    display: block;
+   font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-slate);
     text-decoration: none;
+    transition: color var(--timing-function);
 }
 
 .header-mail:is(:hover, :focus) {
@@ -220,6 +240,7 @@ body {
     margin: 0 auto;
     margin-top: 48px;
     border: none;
+    transition: background-color var(--timing-function);
 }
 
 .hero-btn:hover,
@@ -370,10 +391,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
+transition: background-color var(--timing-function);
 }
 
-.team-soc-link:hover,
+.team-soc-link:hover, 
 .team-soc-link:focus {
     background-color: #404BBF;
 }
@@ -412,6 +433,7 @@ body {
 .link-icon-customers:hover,
 .link-icon-customers:focus {
     border-color: #404BBF;
+    color: #404BBF;
 }
 
 .link-icon-customers {
@@ -423,13 +445,10 @@ body {
     align-items: center;
     border: 1px solid #8E8F99;
     border-radius: 4px;
-
+transition: border-color var(--timing-function), color var(--timing-function);
 }
 
-.link-icon-customers:hover,
-.link-icon-customers:focus {
-    color: #404BBF;
-}
+
 
 .svg-image-customers {
     fill: currentColor;
@@ -510,7 +529,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
+transition: background-color var(--timing-function);
 }
 
 .footer-soc-link:hover,
