@@ -357,7 +357,7 @@ border-radius: 2px;
 
 .team-text {
     color: var(--color-slate);
-    margin-bottom: 8px;
+    
 }
 
 .team-description {
@@ -502,7 +502,6 @@ transition: border-color var(--timing-function), color var(--timing-function);
 
 .footer-title {
     color: #FFFFFF;
-    width: 264px;
     margin-bottom: 16px;
     font-weight: 500;
 }
